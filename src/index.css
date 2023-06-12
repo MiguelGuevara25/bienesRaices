@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.portada {
+  background-image: url(./assets/img/header.webp);
+  background-position: center center;
+  background-size: cover;
+  min-height: 700px;
+  width: 100%;
+}
+
+.portada2 {
+  background-image: url(./assets/img/encuentra.webp);
+  background-position: center center;
+  background-size: cover;
+  min-height: 450px;
+  width: 100%;
+}
