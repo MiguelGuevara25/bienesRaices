@@ -1,12 +1,14 @@
 import Footer from "../components/Footer";
-import Header from "../components/Header";
+import Navbar from "../components/Navbar";
 
 import Contacto3 from "../assets/img/destacada3.webp";
 
 const Contacto = () => {
   return (
     <>
-      <Header />
+      <header className="bg-zinc-800">
+        <Navbar />
+      </header>
 
       <main>
         <section className="w-[85%] mx-auto mb-10">

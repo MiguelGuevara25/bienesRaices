@@ -1,5 +1,5 @@
 import Footer from "../components/Footer";
-import Header from "../components/Header";
+import Navbar from "../components/Navbar";
 
 import Blog1 from "../assets/img/blog1.webp";
 import Blog2 from "../assets/img/blog2.webp";
@@ -9,7 +9,9 @@ import Blog4 from "../assets/img/blog4.webp";
 const Blog = () => {
   return (
     <>
-      <Header />
+      <header className="bg-zinc-800">
+        <Navbar />
+      </header>
 
       <main>
         <section className="w-[85%] mx-auto mb-10">

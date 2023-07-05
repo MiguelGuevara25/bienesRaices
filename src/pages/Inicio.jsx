@@ -1,5 +1,5 @@
 import Footer from "../components/Footer";
-import Header from "../components/Header";
+import Navbar from "../components/Navbar";
 
 import LogoSecurity from "../assets/img/icono1.svg";
 import LogoMoney from "../assets/img/icono2.svg";
@@ -14,7 +14,9 @@ import Anuncio3 from "../assets/img/anuncio3.webp";
 const Inicio = () => {
   return (
     <>
-      <Header />
+      <div className="portada">
+        <Navbar />
+      </div>
 
       <main>
         <section className="w-[85%] mx-auto">

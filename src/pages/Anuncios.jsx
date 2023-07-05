@@ -8,12 +8,14 @@ import Anuncio4 from "../assets/img/anuncio4.webp";
 import Anuncio5 from "../assets/img/anuncio5.webp";
 import Anuncio6 from "../assets/img/anuncio6.webp";
 import Footer from "../components/Footer";
-import Header from "../components/Header";
+import Navbar from "../components/Navbar";
 
 const Anuncios = () => {
   return (
     <>
-      <Header />
+      <header className="bg-zinc-800">
+        <Navbar />
+      </header>
 
       <main>
         <section className="w-[85%] mx-auto mb-10">
