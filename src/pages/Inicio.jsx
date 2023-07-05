@@ -1,4 +1,6 @@
-import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+
 import LogoSecurity from "../assets/img/icono1.svg";
 import LogoMoney from "../assets/img/icono2.svg";
 import LogoTime from "../assets/img/icono3.svg";
@@ -8,18 +10,17 @@ import LogoEstacionamiento from "../assets/img/icono_estacionamiento.svg";
 import Anuncio1 from "../assets/img/anuncio1.webp";
 import Anuncio2 from "../assets/img/anuncio2.webp";
 import Anuncio3 from "../assets/img/anuncio3.webp";
-import Comillas from "../assets/img/comilla.svg";
 
 const Inicio = () => {
   return (
     <>
-      <header className="portada">
-        <Navbar />
-      </header>
+      <Header />
 
       <main>
-        <section className="container mx-auto">
-          <h2 className="text-center text-4xl my-7">Más Sobre Nosotros</h2>
+        <section className="w-[85%] mx-auto">
+          <h2 className="text-4xl my-8 mx-5 md:mx-0 text-center">
+            Más Sobre Nosotros
+          </h2>
           <div className="flex flex-col md:flex-row gap-10">
             <div className="flex flex-col items-center gap-7">
               <img src={LogoSecurity} alt="" className="h-24" />
@@ -53,8 +54,10 @@ const Inicio = () => {
           </div>
         </section>
 
-        <section className="container mx-auto">
-          <h2 className="text-center text-4xl my-7">Casas y Depas en Venta</h2>
+        <section className="w-[85%] mx-auto">
+          <h2 className="text-4xl my-8 mx-5 md:mx-0 text-center">
+            Casas y Depas en Venta
+          </h2>
           <div className="flex flex-col lg:flex-row gap-10">
             <div className="flex flex-col gap-2 shadow-xl border">
               <img src={Anuncio1} alt="" />
@@ -168,7 +171,7 @@ const Inicio = () => {
             <input
               type="button"
               value="Ver Todas"
-              className="text-white font-bold bg-lime-500 py-3 px-7"
+              className="text-white font-bold bg-lime-500 hover:bg-lime-600 transition-colors py-3 px-7 cursor-pointer"
             />
           </div>
         </section>
@@ -191,26 +194,61 @@ const Inicio = () => {
           </div>
         </section>
 
-        <section className="container mx-auto">
-          <div className="flex justify-around my-5">
-            <div>
+        <section className="w-[85%] mx-auto">
+          <div className="flex items-center flex-col md:flex-row justify-evenly my-5">
+            <div className="flex flex-col gap-8 md:w-1/3 w-9/12">
               <h3 className="text-2xl">Nuestro Blog</h3>
+              <div className="flex flex-col gap-5">
+                <h4 className="font-bold text-2xl">
+                  Terraza en el techo de tu casa
+                </h4>
+                <div className="flex flex-col gap-5 text-lg">
+                  <p>
+                    Escrito el:{" "}
+                    <span className="text-orange-500">20/10/2023</span> por:{" "}
+                    <span className="text-orange-500">Admin</span>{" "}
+                  </p>
+                  <p>
+                    Consejos para construir una terraza en el techo de tu casa
+                    con los mejores materiales y ahorrando dinero
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-5">
+                <h4 className="font-bold text-2xl">
+                  Guía para la decoración de tu hogar
+                </h4>
+                <div className="flex flex-col gap-5 text-lg">
+                  <p>
+                    Escrito el:{" "}
+                    <span className="text-orange-500">20/10/2023</span> por:{" "}
+                    <span className="text-orange-500">Admin</span>{" "}
+                  </p>
+                  <p>
+                    Máximiza el espacio de tu hogar con esta guía, aprende a
+                    combinar muebles y colores para darle vida a tu espacio
+                  </p>
+                </div>
+              </div>
             </div>
-            <div>
+
+            <div className="w-2/6 flex flex-col items-center gap-8">
               <h3 className="text-2xl">Testimoniales</h3>
-              <div className="bg-lime-500 text-white grid grid-cols-2">
-                <img src={Comillas} alt="comillas" />
-                <p className="text-2xl">
+              <div className="bg-lime-500 text-white rounded-2xl p-5 testi">
+                <p className="text-2xl w-48 mb-5">
                   El personal se comportó de una excelente forma, muy buena
                   atención y la casa que me ofrecieron cumple con todas mis
                   expectativas.
                 </p>
-                <p className="text-end text-xl">-Nicole Mejia</p>
+                <p className="text-end text-xl font-bold">- Nicole Mejia</p>
               </div>
             </div>
           </div>
         </section>
       </main>
+
+      <Footer />
     </>
   );
 };

@@ -3,7 +3,7 @@ import Logo from "../assets/img/logo.svg";
 
 const Navbar = () => {
   return (
-    <nav className="flex flex-col lg:flex-row gap-5 lg:gap-0 justify-between items-center container mx-auto py-5">
+    <nav className="flex flex-col lg:flex-row gap-5 lg:gap-0 justify-between items-center w-[85%] mx-auto py-5">
       <div className="w-80">
         <Link to="/">
           <img src={Logo} alt="Logo" />
