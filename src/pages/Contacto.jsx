@@ -1,15 +1,9 @@
 import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
-
 import Contacto3 from "../assets/img/destacada3.webp";
 
 const Contacto = () => {
   return (
     <>
-      <header className="bg-zinc-800">
-        <Navbar />
-      </header>
-
       <main>
         <section className="w-[85%] mx-auto mb-10">
           <h1 className="text-4xl my-8 mx-5 md:mx-0 text-center">

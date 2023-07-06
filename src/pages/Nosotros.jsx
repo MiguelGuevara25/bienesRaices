@@ -1,5 +1,4 @@
 import Footer from "../components/Footer";
-import Header from "../components/Header";
 
 import Blog3 from "../assets/img/blog3.webp";
 import LogoSecurity from "../assets/img/icono1.svg";
@@ -9,15 +8,13 @@ import LogoTime from "../assets/img/icono3.svg";
 const Nosotros = () => {
   return (
     <>
-      <Header />
-
       <main>
         <section className="w-[85%] mx-auto mb-10">
           <h1 className="text-4xl my-8 mx-5 md:mx-0 text-center">
             Conoce sobre Nosotros
           </h1>
 
-          <div className="flex gap-5 items-center">
+          <div className="flex flex-col md:flex-row gap-5 items-center">
             <img src={Blog3} alt="Blog 3" />
 
             <div className="flex flex-col gap-5">
@@ -47,7 +44,7 @@ const Nosotros = () => {
           </div>
         </section>
 
-        <section className="w-[85%] mx-auto">
+        <section className="w-[85%] mx-auto mb-10">
           <h2 className="text-4xl my-8 mx-5 md:mx-0 text-center">
             Más Sobre Nosotros
           </h2>
