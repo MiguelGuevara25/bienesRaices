@@ -38,31 +38,31 @@ const Contacto = () => {
                 </div>
 
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="nombre" className="uppercase font-bold">
+                  <label htmlFor="email" className="uppercase font-bold">
                     E-Mail:
                   </label>
 
                   <input
-                    type="text"
+                    type="email"
                     placeholder="Tu E-Mail"
                     className="border rounded-lg p-3"
                   />
                 </div>
 
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="nombre" className="uppercase font-bold">
+                  <label htmlFor="telefono" className="uppercase font-bold">
                     Teléfono:
                   </label>
 
                   <input
-                    type="text"
+                    type="number"
                     placeholder="Tu Telefono"
                     className="border rounded-lg p-3"
                   />
                 </div>
 
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="nombre" className="uppercase font-bold">
+                  <label htmlFor="mensaje" className="uppercase font-bold">
                     Mensaje:
                   </label>
 
@@ -76,54 +76,31 @@ const Contacto = () => {
 
             <form className="border border-lime-500 rounded-lg p-5">
               <h3 className="text-center uppercase text-2xl font-bold text-orange-500">
-                Información Personal
+                Información Sobre la Propiedad
               </h3>
 
               <div className="flex flex-col gap-5">
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="nombre" className="uppercase font-bold">
-                    Nombre:
+                  <label htmlFor="ventacompra" className="uppercase font-bold">
+                    Venta o Compra:
+                  </label>
+
+                  <select className="border rounded-lg p-3">
+                    <option hidden>- Seleccione -</option>
+                    <option value="venta">Venta</option>
+                    <option value="compra">Compra</option>
+                  </select>
+                </div>
+
+                <div className="flex flex-col gap-2">
+                  <label htmlFor="precio" className="uppercase font-bold">
+                    Precio:
                   </label>
 
                   <input
                     type="text"
-                    placeholder="Tu Nombre"
+                    placeholder="Tu Precio"
                     className="border rounded-lg p-3"
-                  />
-                </div>
-
-                <div className="flex flex-col gap-2">
-                  <label htmlFor="nombre" className="uppercase font-bold">
-                    E-Mail:
-                  </label>
-
-                  <input
-                    type="text"
-                    placeholder="Tu E-Mail"
-                    className="border rounded-lg p-3"
-                  />
-                </div>
-
-                <div className="flex flex-col gap-2">
-                  <label htmlFor="nombre" className="uppercase font-bold">
-                    Teléfono:
-                  </label>
-
-                  <input
-                    type="text"
-                    placeholder="Tu Telefono"
-                    className="border rounded-lg p-3"
-                  />
-                </div>
-
-                <div className="flex flex-col gap-2">
-                  <label htmlFor="nombre" className="uppercase font-bold">
-                    Mensaje:
-                  </label>
-
-                  <textarea
-                    className="border rounded-lg p-3 h-40"
-                    placeholder="Tu Mensaje"
                   />
                 </div>
               </div>
@@ -131,44 +108,42 @@ const Contacto = () => {
 
             <form className="border border-lime-500 rounded-lg p-5">
               <h3 className="text-center uppercase text-2xl font-bold text-orange-500">
-                Información Personal
+                Información Sobre la Propiedad
               </h3>
 
               <div className="flex flex-col gap-5">
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="nombre" className="uppercase font-bold">
-                    Nombre:
-                  </label>
+                  <span className="uppercase font-bold">
+                    ¿Como desea ser contactado?
+                  </span>
 
-                  <input
-                    type="text"
-                    placeholder="Tu Nombre"
-                    className="border rounded-lg p-3"
-                  />
+                  <div className="flex gap-5 uppercase">
+                    <div className="flex gap-2">
+                      <input type="radio" name="telefono" />
+                      <label>Teléfono</label>
+                    </div>
+
+                    <div className="flex gap-2">
+                      <input type="radio" name="email" />
+                      <label>E-Mail</label>
+                    </div>
+                  </div>
                 </div>
 
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="nombre" className="uppercase font-bold">
-                    E-Mail:
+                  <label htmlFor="fecha" className="uppercase font-bold">
+                    Fecha:
                   </label>
 
-                  <input
-                    type="text"
-                    placeholder="Tu E-Mail"
-                    className="border rounded-lg p-3"
-                  />
+                  <input type="date" className="border rounded-lg p-3" />
                 </div>
 
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="nombre" className="uppercase font-bold">
-                    E-Mail:
+                  <label htmlFor="hora" className="uppercase font-bold">
+                    Hora:
                   </label>
 
-                  <input
-                    type="text"
-                    placeholder="Tu E-Mail"
-                    className="border rounded-lg p-3"
-                  />
+                  <input type="time" className="border rounded-lg p-3" />
                 </div>
               </div>
             </form>
