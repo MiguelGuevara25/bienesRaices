@@ -9,7 +9,6 @@ const Contacto = () => {
           <h1 className="text-4xl my-8 mx-5 md:mx-0 text-center">
             Contáctanos
           </h1>
-
           <img src={Contacto3} alt="" />
         </section>
 
@@ -148,6 +147,12 @@ const Contacto = () => {
               </div>
             </form>
           </div>
+
+          <input
+            type="button"
+            value="Enviar"
+            className="text-white font-bold uppercase bg-lime-500 hover:bg-lime-600 transition-colors py-3 px-7 cursor-pointer mt-5"
+          />
         </section>
       </main>
 

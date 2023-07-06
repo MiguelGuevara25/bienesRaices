@@ -19,7 +19,7 @@ const Blog = () => {
               <img src={Blog1} width={250} alt="" />
 
               <div className="flex flex-col gap-5 text-lg">
-                <h3 className="font-bold text-2xl">
+                <h3 className="font-bold text-2xl linea__verde">
                   Terraza en el techo de tu casa
                 </h3>
 
@@ -39,7 +39,7 @@ const Blog = () => {
               <img src={Blog2} width={250} alt="" />
 
               <div className="flex flex-col gap-5 text-lg">
-                <h3 className="font-bold text-2xl">
+                <h3 className="font-bold text-2xl linea__verde">
                   Terraza en el techo de tu casa
                 </h3>
 
@@ -59,7 +59,7 @@ const Blog = () => {
               <img src={Blog3} width={250} alt="" />
 
               <div className="flex flex-col gap-5 text-lg">
-                <h3 className="font-bold text-2xl">
+                <h3 className="font-bold text-2xl linea__verde">
                   Terraza en el techo de tu casa
                 </h3>
 
@@ -79,7 +79,7 @@ const Blog = () => {
               <img src={Blog4} width={250} alt="" />
 
               <div className="flex flex-col gap-5 text-lg">
-                <h3 className="font-bold text-2xl">
+                <h3 className="font-bold text-2xl linea__verde">
                   Terraza en el techo de tu casa
                 </h3>
 

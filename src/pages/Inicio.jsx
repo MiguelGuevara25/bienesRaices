@@ -196,7 +196,7 @@ const Inicio = () => {
             <div className="flex flex-col gap-8 md:w-1/3 w-9/12">
               <h3 className="text-2xl">Nuestro Blog</h3>
               <div className="flex flex-col gap-5">
-                <h4 className="font-bold text-2xl">
+                <h4 className="font-bold text-2xl linea__verde">
                   Terraza en el techo de tu casa
                 </h4>
                 <div className="flex flex-col gap-5 text-lg">
@@ -213,7 +213,7 @@ const Inicio = () => {
               </div>
 
               <div className="flex flex-col gap-5">
-                <h4 className="font-bold text-2xl">
+                <h4 className="font-bold text-2xl linea__verde">
                   Guía para la decoración de tu hogar
                 </h4>
                 <div className="flex flex-col gap-5 text-lg">

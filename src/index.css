@@ -66,3 +66,17 @@
   left: 0rem;
   top: 0.5rem;
 }
+
+.linea__verde {
+  position: relative;
+  display: inline-block;
+}
+
+.linea__verde::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  width: 20%;
+  height: 5px;
+  background-color: #a3e635;
+}
