@@ -80,3 +80,9 @@
   height: 5px;
   background-color: #a3e635;
 }
+
+.login__background {
+  background-image: url(./assets/img/header.webp);
+  background-position: center center;
+  background-size: cover;
+}

@@ -1,8 +1,15 @@
 import { Link, Outlet, useLocation } from "react-router-dom";
 import Logo from "../assets/img/logo.svg";
+import BurgerNavbar from "../assets/img/barras.svg";
+import { useState } from "react";
 
 const Navbar = () => {
+  const [touchNavbar, setTouchNavbar] = useState(false);
   const location = useLocation();
+
+  const viewNavbar = () => {
+    setTouchNavbar(!touchNavbar);
+  };
 
   return (
     <>
@@ -16,7 +23,15 @@ const Navbar = () => {
             </Link>
           </div>
 
-          <div className="flex flex-col lg:flex-row gap-5 items-center text-white text-lg">
+          <div className="block lg:hidden">
+            <img onClick={viewNavbar} src={BurgerNavbar} width={50} />
+          </div>
+
+          <div
+            className={`${
+              touchNavbar ? "flex" : "hidden"
+            } lg:flex flex-col lg:flex-row gap-5 items-center text-white text-lg`}
+          >
             <Link to="/nosotros">Nosotros</Link>
             <Link to="/anuncios">Anuncios</Link>
             <Link to="/blog">Blog</Link>

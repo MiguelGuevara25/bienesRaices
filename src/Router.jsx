@@ -1,10 +1,14 @@
 import { createBrowserRouter } from "react-router-dom";
-import Inicio from "./pages/Inicio";
+
+import Administrador from "./pages/Administrador";
+import Navbar from "./components/Navbar";
 import Nosotros from "./pages/Nosotros";
 import Anuncios from "./pages/Anuncios";
-import Blog from "./pages/Blog";
 import Contacto from "./pages/Contacto";
-import Navbar from "./components/Navbar";
+import Inicio from "./pages/Inicio";
+import Login from "./pages/Login";
+import Blog from "./pages/Blog";
+import AgregarPropiedad from "./pages/AgregarPropiedad";
 
 const router = createBrowserRouter([
   {
@@ -35,7 +39,22 @@ const router = createBrowserRouter([
         path: "/contacto",
         element: <Contacto />,
       },
+
+      {
+        path: "/admin",
+        element: <Administrador />,
+      },
+
+      {
+        path: "/agregarpropiedad",
+        element: <AgregarPropiedad />,
+      },
     ],
+  },
+
+  {
+    path: "/login",
+    element: <Login />,
   },
 ]);
 
