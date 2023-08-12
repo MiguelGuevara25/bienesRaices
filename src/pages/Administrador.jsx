@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import useBienesRaices from "../hooks/useBienesRaices";
 
 const Administrador = () => {
-  const { propiedades } = useBienesRaices();
+  const { propiedades, deletePropiedad } = useBienesRaices();
 
   return (
     <section className="w-[85%] mx-auto mb-10">
@@ -30,9 +30,9 @@ const Administrador = () => {
           </tr>
         </thead>
 
-        <tbody>
-          {propiedades.map((propiedad) => (
-            <tr key={propiedad.id} className="text-center">
+        {propiedades.map((propiedad) => (
+          <tbody className="text-center" key={propiedad.generateId}>
+            <tr>
               <td>
                 <span>{propiedad.titulo}</span>
               </td>
@@ -46,25 +46,27 @@ const Administrador = () => {
               </td>
 
               <td>
-                <img className="mx-auto" src={propiedad.imagen} width={250} />
+                <img className="mx-auto" src={propiedad.fotoCasa} width={250} />
+                <p>{propiedad.fotoCasa}</p>
               </td>
 
               <td>
                 <input
                   type="button"
                   value="Editar"
-                  className="text-white bg-blue-500 py-3 px-7 cursor-pointer mt-5"
+                  className="text-white bg-blue-500 py-3 px-7 cursor-pointer my-5 mr-3"
                 />
 
                 <input
                   type="button"
                   value="Eliminar"
-                  className="text-white bg-red-500 py-3 px-7 cursor-pointer mt-5"
+                  onClick={() => deletePropiedad(propiedad.generateId)}
+                  className="text-white bg-red-500 py-3 px-7 cursor-pointer my-5"
                 />
               </td>
             </tr>
-          ))}
-        </tbody>
+          </tbody>
+        ))}
       </table>
 
       {/* <div className="flex flex-col gap-2 shadow-xl border">

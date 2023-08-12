@@ -1,6 +1,5 @@
 import { useState, useEffect, createContext } from "react";
 
-
 const BienesRaicesContext = createContext();
 
 const BienesRaicesProvider = ({ children }) => {
@@ -9,6 +8,7 @@ const BienesRaicesProvider = ({ children }) => {
   const [titulo, setTitulo] = useState("");
   const [descripcion, setDescripcion] = useState("");
   const [precio, setPrecio] = useState("");
+  const [fotoCasa, setFotoCasa] = useState("");
   const [propiedades, setPropiedades] = useState(() => {
     const guardarPropiedades = localStorage.getItem("propiedadesData");
 
@@ -19,32 +19,40 @@ const BienesRaicesProvider = ({ children }) => {
     }
   });
 
-  
-
   useEffect(() => {
     localStorage.setItem("propiedadesData", JSON.stringify(propiedades));
   }, [propiedades]);
 
-  const objectPropiedades = { generateId, titulo, descripcion, precio };
+  const deletePropiedad = (id) => {
+    const newPropiedades = propiedades.filter(
+      (propiedad) => propiedad.generateId !== id
+    );
+    setPropiedades(newPropiedades);
+  };
 
-  const addPropiedad = (e) => {
-    e.preventDefault();
-    setPropiedades([...propiedades, objectPropiedades]);
-
-    console.log("Las propiedades son:", propiedades);
+  const objectPropiedades = {
+    generateId,
+    titulo,
+    descripcion,
+    precio,
+    fotoCasa,
   };
 
   return (
     <BienesRaicesContext.Provider
       value={{
         propiedades,
-        addPropiedad,
         titulo,
         descripcion,
         precio,
         setTitulo,
         setDescripcion,
         setPrecio,
+        setPropiedades,
+        objectPropiedades,
+        setFotoCasa,
+        fotoCasa,
+        deletePropiedad,
       }}
     >
       {children}
